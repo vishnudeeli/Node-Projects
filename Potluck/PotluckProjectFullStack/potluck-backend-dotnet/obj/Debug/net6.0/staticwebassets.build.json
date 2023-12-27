@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Cc73NXPn4vfPDnHZw/XatI3XJjtDe1c4zFW8MHyAWJg=",
+  "Source": "potluck-backend-dotnet",
+  "BasePath": "_content/potluck-backend-dotnet",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

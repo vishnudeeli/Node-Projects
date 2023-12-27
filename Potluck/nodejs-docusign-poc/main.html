@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PDF Display and DocuSign Redirect</title>
+</head>
+
+<body>
+    <h1>PDF Display and DocuSign Redirect</h1>
+
+    <div id="pdfContainer"></div>
+    <script>
+        // Sample list of user IDs
+        var userIds = ['1', '2', '3', '4', '5'];
+
+        // Loop through the user IDs and generate embed tags
+        for (var i = 0; i < userIds.length; i++) {
+            var userId = userIds[i];
+            var pdfUrl = 'http://localhost:3000/pdfs/' + userId + 'pdf';
+            var embedTag = document.createElement('embed');
+            embedTag.src = pdfUrl;
+            embedTag.type = 'application/pdf';
+            embedTag.width = '100%';
+            embedTag.height = '800px';
+            document.getElementById('pdfContainer').appendChild(embedTag);
+        }
+    </script>
+
+    <!-- <embed src="/pdfs/4" type="application/pdf" width="100%" height="800px" /> -->
+
+    <form action="/submit" method="POST">
+        <input type="hidden" name="userId" value=":userId" />
+        <input type="text" name="name" value=":name" />
+        <input type="email" name="email" value=":email" />
+        <button type="submit">Submit to DocuSign</button>
+    </form>
+</body>
+
+</html>
